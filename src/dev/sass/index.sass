@@ -1,0 +1,148 @@
+@use 'reset'
+@use 'varsnmix' as vm
+@use 'utilities'
+
+
+
+body
+  position: relative
+  width: 100vw
+  width: 100%
+  min-height : 100vh
+  font-family : vm.$main_font
+// Header and navigation menu
+.header
+  $subflexgap : .5rem
+  position: fixed
+  top : 0
+  width: 100vw
+  padding: 0.5rem 1rem
+  background-color: vm.$black
+  transform-style: preserve-3d
+  font-size: .7rem
+  z-index: vm.$z-1
+  &__logo
+    filter: invert(1)
+  &__top
+    @include vm.flex($justify: space-between)
+    width: 100%
+  &__opener
+    @include vm.flex($justify : flex-end)
+    width: 2rem
+    height: 2rem
+    &__bar
+      height: 3px
+      background-color: vm.$white
+  &__bottom
+    @include vm.flex($justify: space-between)
+  &__userinfo
+    @include vm.flex()
+    gap: $subflexgap
+  &__social
+    @include vm.flex()
+    gap : $subflexgap
+  &_interact
+    padding: .5rem
+    &:hover
+      color : vm.$white
+.bar1
+  width: 100%
+.bar2
+  width: 50%
+
+.nav
+  position: absolute
+  left : 0
+  top: 100%
+  width: 100%
+  transform: translateY(-100%) translateZ(-1px)
+  background-color: vm.$black
+  transition: transform .3s
+  z-index: -1
+  &__ul
+    @include vm.flex($direction: column)
+    &__li
+      width: 100%
+      padding: .5rem
+      border-bottom: 1px solid vm.$grayish
+      text-align: center
+      transition: opacity .3s
+      cursor: pointer
+      &:hover
+        opacity: .5
+.opened_nav
+  transform: translateY(0%) translateZ(-1px)
+
+
+// Main sections
+.main
+  width: 100%
+  margin-top: 5rem
+// Hero section
+.hero
+  @include vm.flex()
+  position: relative
+  width: 100%
+  height: 80vh
+  background-color: vm.$black
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%,60% 95%, 40% 100%, 30% 90%,0% 100%)
+  &__gradient
+    position: absolute
+    bottom: 0
+    height: 80%
+    clip-path: polygon(0% 0%, 25% 20%, 75% 10%, 100% 50%, 100% 100%, 0% 100%)
+    z-index : 0
+  &__img
+    position: relative
+    z-index: vm.$z-2
+  &__text
+    position: absolute
+    align-self: flex-start
+    margin-top: 4rem
+    letter-spacing: .5rem
+    z-index: vm.$z-1
+  &__popup
+    @include vm.flex()
+    position: absolute
+    bottom: 7vh
+    right: 10vw
+    width: 9rem
+    height: 9rem
+    padding:.5rem
+    border-radius: 50%
+    background-color: vm.$darkBlue
+    z-index: vm.$z-2
+    &__content
+      text-align: center
+      font-size: .8rem
+    &__link
+      font-weight: bold
+      color: vm.$green
+
+// Styles modifications for desktop devices
+@media screen and (min-width: 1100px)
+  // Header and navigation menu
+  .header
+    @include vm.flex()
+    padding: 0.5rem 5rem 
+    font-size: .8rem
+    &__top
+      width: 40%
+    &__bottom
+      width: 100%
+      border-top: 1px solid vm.$grayish
+    &__opener
+      display: none
+  .nav
+    position: static
+    transform: translateY(0) translateZ(0)
+    width:60%
+    &__ul
+      flex-direction: row
+      &__li
+        width: auto
+        border-bottom: none
+  // Main sections styles
+  .hero__popup
+    right: 20vw
+    bottom: 15vh

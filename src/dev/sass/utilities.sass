@@ -1,0 +1,40 @@
+@use 'varsnmix' as vm
+
+.nikelogo
+  width: 3rem
+.text_important
+  color: vm.$white
+  font:
+    weight: bold
+  text-transform: uppercase
+.text_light
+  color: vm.$grayish
+  text-transform: uppercase
+.hero_text
+  color : vm.$white
+  font-size : min(10rem,12vw)
+  text-transform: uppercase
+.gradient
+  width: 100%
+  background: linear-gradient(90deg, vm.$darkBlue 31%, vm.$green 68%)
+.sectionTitle
+  color: vm.$black
+  font-size: 2rem
+  text-transform: uppercase
+.text_normal
+  color : vm.$grayish
+.user_btn
+  padding: .5rem 1rem 
+  color: vm.$white
+  border-radius : 5px
+  background-color: vm.$darkGreen
+
+.z_1
+  position: relative
+  z-index: 10
+.z_0
+  position: relative
+  z-index : 0
+.z_2
+  position: relative
+  z-index : vm.$z-2

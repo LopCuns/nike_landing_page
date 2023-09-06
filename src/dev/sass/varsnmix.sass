@@ -1,0 +1,20 @@
+// VARIABLES
+// COLORS
+$green : #76b34f
+$darkGreen : #01a608
+$darkBlue : #0c3f6c
+$grayish : #ccc
+$white : #fff
+$black : #222
+//Z-INDEX
+$z-1 : 10
+$z-2 : 20
+$z-3 : 30
+// FONTS
+$main_font :  Arial, Helvetica, sans-serif
+// MIXINS  
+@mixin flex($direction : row, $wrap : wrap, $justify : center, $align : center)
+  display : flex
+  flex-flow: $direction $wrap
+  justify-content: $justify
+  align-items: $align

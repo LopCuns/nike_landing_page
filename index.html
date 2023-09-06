@@ -10,51 +10,58 @@
   <link rel="mask-icon" href="src/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="src/public/styles/index.css">
   <title>Nike football</title>
 </head>
 <body>
   <header class="header">
     <div class="header__top">
-      <img src="src/assets/images/nike_icon.svg" alt="nike logo" class="nikelogo">
-      <nav class="nav">
-        <ul class="nav__ul text_important">
-          <li class="nav__ul__li">football</li>
-          <li class="nav__ul__li">accesories</li>
-          <li class="nav__ul__li">t-shirts</li>
-          <li class="nav__ul__li">sneakers</li>
-          <li class="nav__ul__li">events</li>
-          <li class="nav__ul__li">contact us</li>
-        </ul>
-      </nav>
+      <img src="src/assets/images/nike_icon.svg" alt="nike logo" class="nikelogo header__logo" draggable="false">
+      <div class="header__opener" id="menuOpener">
+        <div class="header__opener__bar bar1"></div>
+        <div class="header__opener__bar bar2"></div>
+      </div>
     </div>
-    <div class="header__bottom light_text">
+    <nav class="nav">
+      <ul class="nav__ul text_important">
+        <li class="nav__ul__li">football</li>
+        <li class="nav__ul__li">accesories</li>
+        <li class="nav__ul__li">t-shirts</li>
+        <li class="nav__ul__li">sneakers</li>
+        <li class="nav__ul__li">events</li>
+        <li class="nav__ul__li">contact us</li>
+      </ul>
+    </nav>
+    <div class="header__bottom text_light">
       <div class="header__userinfo">
         <p class="header__userinfo__lang">en</p>
-        <a href="#" class="header__userinfo__enter">login</a>
-        <a href="#" class="header__userinfo__enter">register</a>
+        <a href="#" class="header__userinfo__enter header_interact">login</a>
+        <a href="#" class="header__userinfo__enter header_interact">register</a>
       </div>
       <div class="header__social">
-        <a href="#" class="header__social__media">F</p>
-        <a href="#" class="header__social__media">T</p>
-        <p class="header__social__media">P</p>
-        <a href="#" class="header__social__media">+34 999 999 999</a>
+        <a href="#" class="header__social__media header_interact">F</a>
+        <a href="#" class="header__social__media header_interact">T</a>
+        <a href="#" class="header__social__media header_interact">P +34 999 999 999</a>
       </div>
     </div>
   </header>
   <main class="main">
     <section class="main__section hero">
-      <img src="src/assets/images/captain.webp" alt="captain image" class="hero__img">
-      <h1 class="hero_text">football</h1>
-      <div class="popup">
-        <p class="popup__content text_important">nike seattle seahwaks shirt</p>
-        <a href="#" class="popup__link">buy now -></a>
+      <img src="src/assets/images/captain.webp" alt="captain image" class="hero__img" draggable="false">
+      <h1 class="hero_text hero__text">
+        football
+      </h1>
+      <div class="gradient hero__gradient"></div>
+      <div class="hero__popup">
+        <p class="hero__popup__content text_important">nike seattle seahwaks shirt</p>
+        <a href="#" class="hero__popup__link">buy now -></a>
       </div>
     </section>
     <section class="main__section products">
-      <img src="src/assets/images/nike_icon.svg" alt="nike logo" class="nikelogo">
+      <img src="src/assets/images/nike_icon.svg" alt="nike logo" class="nikelogo" draggable="false">
       <h2 class="sectionTitle">nike season 12</h2>
       <article class="productcard">
-        <!-- TODO : CONVERTIR LAS CARDS EN WEB COMPONENTS -->
+        
         <div class="productcard__info">
           <h3 class="productcard__info__text"><span>acronym x nike</span><span>air presto mid "dynamic yellow"</span></h3>
           <div class="productcard__info__prices">
@@ -66,8 +73,10 @@
             <div class="productcard__colors__color"></div>
             <div class="productcard__colors__color"></div>
           </div>
-          <img src="src/assets/images/nikeair.webp" alt="nike air image">
         </div>
+        <img src="src/assets/images/nikeair.webp" alt="nike air image" draggable="false">
+      </article>
+      <article>
         <div class="productcard__info">
           <h3 class="productcard__info__text"><span>nike therma</span><span>hoodie junior</span></h3>
           <div class="productcard__info__prices">
@@ -80,20 +89,21 @@
             <div class="productcard__colors__color"></div>
             <div class="productcard__colors__color"></div>
           </div>
-          <img src="src/assets/images/hoodie.webp" alt="nike hoodie">
         </div>
+        <img src="src/assets/images/hoodie.webp" alt="nike hoodie" draggable="false">
+      </article>
+      <article>
         <div class="productcard__info">
           <h3 class="productcard__info__text"><span>nike women's epic</span><span>react flyknit unic</span></h3>
             <p class="productcard__info__prices__now">55.11$</p>
-          </div>
           <a href="#" class="productcard__buy">buy now +</a>
           <div class="productcard__colors">
             <div class="productcard__colors__color"></div>
             <div class="productcard__colors__color"></div>
             <div class="productcard__colors__color"></div>
           </div>
-          <img src="src/assets/images/adidas.webp" alt="nike women running">
         </div>
+          <img src="src/assets/images/adidas.webp" alt="nike women running" draggable="false">
       </article>
     </section>
     <section class="main__section runner">
@@ -101,21 +111,22 @@
         <h2 class="subtitle">nike collection</h2>
         <p class="announcement_text">seattle seahawks</p>
         <div class="runner__text__thumbs">
-          <img src="src/assets/images/adidas.webp" alt="nike women running" class="runner__text__thumb">
-          <img src="src/assets/images/nikeair.webp" alt="nike air" class="runner__text__thumb">
-          <img src="src/assets/images/hoodie.webp" alt="nike hoodie" class="runner__text__thumb">
+          <img src="src/assets/images/adidas.webp" alt="nike women running" class="runner__text__thumb" draggable="false">
+          <img src="src/assets/images/nikeair.webp" alt="nike air" class="runner__text__thumb" draggable="false">
+          <img src="src/assets/images/hoodie.webp" alt="nike hoodie" class="runner__text__thumb" draggable="false">
         </div>
         <a href="#" class="runner__text__link">explore the collection</a>
       </div>
-      <img src="src/assets/images/running.webp" alt="baller running" class="runner__image">
-      <p class="herotext">just do it</p>
+      <img src="src/assets/images/running.webp" alt="baller running" class="runner__image" draggable="false">
+      <div class="gradient runner__gradient"></div>
+      <p class="hero_text">just do it</p>
     </section>
     <section class="main__section events">
       <h2 class="sectionTitle">upcoming events</h2>
       <div class="events__content">
-        <article class="events_-_content__text">
+        <article class="events__content__text">
           <h3 class="events__content__eventname">boston marathon</h3>
-          <p class="events__content__eventdesc">
+          <p class="events__content__eventdesc text_normal">
             The Boston Marathon is an annual marathon hosted by several cities in greater Boston in eastern Massachusetts,United States.It is always held on Patriot's Day, the third Monday of April.Begun in 1897, the event was inspired by the success of the first marathon competition in the 1896 Summer Olympics
           </p>
           <p class="events__content__eventdate">
@@ -135,7 +146,7 @@
             <div class="events__content__eventcursor__point"></div>
           </div>
         </article>
-        <img src="src/assets/images/marathon.webp" alt="marathon map" class="events__img">
+        <img src="src/assets/images/marathon.webp" alt="marathon map" class="events__img" draggable="false">
       </div>
     </section>
   </main>
@@ -148,8 +159,8 @@
       </form>
     </div>
     <div>
-      <img src="src/assets/images/nike_icon.svg" alt="nike logo" class="nikelogo">
-      <ul class="footer__terms light_text">
+      <img src="src/assets/images/nike_icon.svg" alt="nike logo" class="nikelogo" draggable="false">
+      <ul class="footer__terms text_light">
         <li>terms of use</li>
         <li>pricacy policy</li>
         <li>accessibility</li>
