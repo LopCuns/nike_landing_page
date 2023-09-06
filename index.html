@@ -22,7 +22,7 @@
         <div class="header__opener__bar bar2"></div>
       </div>
     </div>
-    <nav class="nav">
+    <nav class="nav" id="navmenu">
       <ul class="nav__ul text_important">
         <li class="nav__ul__li">football</li>
         <li class="nav__ul__li">accesories</li>
@@ -60,51 +60,31 @@
     <section class="main__section products">
       <img src="src/assets/images/nike_icon.svg" alt="nike logo" class="nikelogo" draggable="false">
       <h2 class="sectionTitle">nike season 12</h2>
-      <article class="productcard">
-        
-        <div class="productcard__info">
-          <h3 class="productcard__info__text"><span>acronym x nike</span><span>air presto mid "dynamic yellow"</span></h3>
-          <div class="productcard__info__prices">
-            <p class="productcard__info__prices__now">23.95$</p>
-          </div>
-          <a href="#" class="productcard__buy">buy now +</a>
-          <div class="productcard__colors">
-            <div class="productcard__colors__color"></div>
-            <div class="productcard__colors__color"></div>
-            <div class="productcard__colors__color"></div>
-          </div>
-        </div>
-        <img src="src/assets/images/nikeair.webp" alt="nike air image" draggable="false">
-      </article>
-      <article>
-        <div class="productcard__info">
-          <h3 class="productcard__info__text"><span>nike therma</span><span>hoodie junior</span></h3>
-          <div class="productcard__info__prices">
-            <p class="productcard__info__prices__now">6.79$</p>
-            <p class="productcard__info__prices__before">23.89$</p>
-          </div>
-          <a href="#" class="productcard__buy">buy now +</a>
-          <div class="productcard__colors">
-            <div class="productcard__colors__color"></div>
-            <div class="productcard__colors__color"></div>
-            <div class="productcard__colors__color"></div>
-          </div>
-        </div>
-        <img src="src/assets/images/hoodie.webp" alt="nike hoodie" draggable="false">
-      </article>
-      <article>
-        <div class="productcard__info">
-          <h3 class="productcard__info__text"><span>nike women's epic</span><span>react flyknit unic</span></h3>
-            <p class="productcard__info__prices__now">55.11$</p>
-          <a href="#" class="productcard__buy">buy now +</a>
-          <div class="productcard__colors">
-            <div class="productcard__colors__color"></div>
-            <div class="productcard__colors__color"></div>
-            <div class="productcard__colors__color"></div>
-          </div>
-        </div>
-          <img src="src/assets/images/adidas.webp" alt="nike women running" draggable="false">
-      </article>
+      <div class="productcards">
+        <product-card data-colors="#f00|#ff0|#0f0">
+          <h3 slot="info__text">
+            <span>acronym x nike</span><span>air presto mid "dynamic yellow"</span>
+          </h3>
+          <p slot="price__now">23.95$</p>
+          <img src="src/assets/images/nikeair.webp" alt="nike air image" slot="productcard__img">
+        </product-card>
+        <product-card data-colors="#afa|#baf|#000">
+          <h3 slot="info__text">
+            <span>nike therma</span><span>hoodie junior</span>
+          </h3>
+          <p slot="price__now">16.79$</p>
+          <p slot="price__before">23.89$</p>
+          <img src="src/assets/images/hoodie.webp" alt="nike hoodie" slot="productcard__img">
+        </product-card>
+        <product-card data-colors="#f0d|#49f|#aff">
+          <h3 slot="info__text">
+            <span>nike women's epic</span><span>react flyknit unic</span>
+          </h3>
+          <p slot="price__now">55.11$</p>
+          <p slot="price__before">75.11$</p>
+          <img src="src/assets/images/adidas.webp" alt="product card image" slot="productcard__img">
+        </product-card>
+      </div>
     </section>
     <section class="main__section runner">
       <div class="runner__text">
@@ -170,5 +150,6 @@
   </footer>
   <!-- Foto de <a href="https://unsplash.com/es/@alschim?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alexander Schimmeck</a> en <a href="https://unsplash.com/es/fotos/mSZVVUdxBls?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
   <!-- Foto de <a href="https://unsplash.com/es/@johntorcasio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">John Torcasio</a> en <a href="https://unsplash.com/es/fotos/fkDch-0vNfY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
+  <script src="src/public/scripts/index.js" type="module"></script>
 </body>
 </html>

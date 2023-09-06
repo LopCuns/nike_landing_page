@@ -1,2 +1,2 @@
-"use strict";
-const init = 'test string';
+import './productcard.component.js';
+import './menu.js';
