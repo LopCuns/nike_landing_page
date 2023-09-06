@@ -1,0 +1,1 @@
+const init : string = 'test string'
