@@ -43,10 +43,6 @@ body
   &__social
     @include vm.flex()
     gap : $subflexgap
-  &_interact
-    padding: .5rem
-    &:hover
-      color : vm.$white
 .bar1
   width: 100%
 .bar2
@@ -231,6 +227,34 @@ body
   &__img
     width: max(50%,20rem)
 
+// Footer styles
+.footer
+  background-color: vm.$lightBlack
+  padding: 1rem
+  &__top
+    @include vm.flex($justify: space-around)
+  &__text
+    color: vm.$white
+    text-align: center
+  &__search
+    &__input
+      padding: .75rem 1.5rem
+      border-radius: 5px
+      background-color: vm.$transparentBlue
+      color: vm.$white
+      &::placeholder
+        text-transform: capitalize
+        font-style: italic
+        color: vm.$black
+    &__submit
+      padding: 1rem 1rem
+      background-color: green
+  &__bottom
+    @include vm.flex($justify: center)
+    padding: 0 2rem
+  &__terms
+    @include vm.flex()
+    font-size: .75rem
 // Styles modifications for desktop devices
 @media screen and (min-width: 1100px)
   // Header and navigation menu
@@ -272,3 +296,5 @@ body
       display: inline-block
     &__gradient
       clip-path: polygon(0% 0%,25% 15%, 35% 0%,75% 0%,90% 15%, 100% 0% ,100% 100%, 70% 95%, 33% 100%, 0% 100%)
+  .footer__bottom
+    justify-content: space-between

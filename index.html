@@ -16,7 +16,7 @@
 <body>
   <header class="header">
     <div class="header__top">
-      <img src="src/assets/images/nike_icon.svg" alt="nike logo" class="nikelogo header__logo" draggable="false">
+      <img src="src/assets/images/nike_icon.svg" alt="nike logo" class="nikelogo whitelogo" draggable="false">
       <div class="header__opener" id="menuOpener">
         <div class="header__opener__bar bar1"></div>
         <div class="header__opener__bar bar2"></div>
@@ -35,13 +35,13 @@
     <div class="header__bottom text_light">
       <div class="header__userinfo">
         <p class="header__userinfo__lang">en</p>
-        <a href="#" class="header__userinfo__enter header_interact">login</a>
-        <a href="#" class="header__userinfo__enter header_interact">register</a>
+        <a href="#" class="header__userinfo__enter user_interact">login</a>
+        <a href="#" class="header__userinfo__enter user_interact">register</a>
       </div>
       <div class="header__social">
-        <a href="#" class="header__social__media header_interact">F</a>
-        <a href="#" class="header__social__media header_interact">T</a>
-        <a href="#" class="header__social__media header_interact">P +34 999 999 999</a>
+        <a href="#" class="header__social__media user_interact">F</a>
+        <a href="#" class="header__social__media user_interact">T</a>
+        <a href="#" class="header__social__media user_interact">P +34 999 999 999</a>
       </div>
     </div>
   </header>
@@ -132,20 +132,20 @@
     </section>
   </main>
   <footer class="footer">
-    <div>
-      <h3 class="footer__text">find a store near you</h3>
+    <div class="footer__top">
+      <h3 class="footer__text sectionTitle">find a store near you</h3>
       <form class="footer__search">
-        <input type="search" placeholder="enter location">
-        <input type="submit" value="find" class="user_btn">
+        <input type="search" placeholder="enter location" class="footer__search__input">
+        <input type="submit" value="find" class="user_btn footer__search__submit">
       </form>
     </div>
-    <div>
-      <img src="src/assets/images/nike_icon.svg" alt="nike logo" class="nikelogo" draggable="false">
+    <div class="footer__bottom">
+      <img src="src/assets/images/nike_icon.svg" alt="nike logo" class="nikelogo whitelogo" draggable="false">
       <ul class="footer__terms text_light">
-        <li>terms of use</li>
-        <li>pricacy policy</li>
-        <li>accessibility</li>
-        <li>nike 2019 - all rights reserved</li>
+        <li class="user_interact">terms of use</li>
+        <li class="user_interact">pricacy policy</li>
+        <li class="user_interact">accessibility</li>
+        <li class="user_interact">nike 2019 - all rights reserved</li>
       </ul>
     </div>
   </footer>
