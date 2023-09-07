@@ -92,10 +92,12 @@ body
     position: absolute
     bottom: 0
     height: 80%
+    background: linear-gradient(90deg, vm.$darkBlue 31%, vm.$green 68%)
     clip-path: polygon(0% 0%, 25% 20%, 75% 10%, 100% 50%, 100% 100%, 0% 100%)
     z-index : 0
   &__img
     position: relative
+    align-self: flex-end
     z-index: vm.$z-2
   &__text
     position: absolute
@@ -130,52 +132,62 @@ body
   @include vm.flex($justify: space-around)
   width: 100%
   gap: 2rem
-.productcard
+
+// Runner section styles
+
+.runner
+  @include vm.flex($justify: space-around, $wrap: no-wrap)
   position: relative
-  width: 18rem
-  height: 14rem
-  padding: .5rem
-  border: 3px dashed vm.$darkBlue
-  text-transform: uppercase
-  &__info
-    @include vm.flex($direction : column, $align : flex-start)
+  margin-top: 5rem
+  padding: 1rem
+  &__text
+    @include vm.flex($direction: column,$justify: flex-start,$align: flex-start)
+    gap: 1.5rem
+    padding-left: 1rem
+    align-self: stretch
+    &__img
+      margin-top: 7rem
+    &__thumbs
+      @include vm.flex()
+      gap: 1rem
+    &__thumb
+      background-color: vm.$blackBlue
+      width: 3rem
+      height: 3rem
+      padding: .25rem
+      border-radius: 5px
+      transition: transform .3s
+      cursor: pointer
+      &:hover
+        transform: scale(.9)
+    &__link
+      @include vm.flex($justify: space-between)
+      width: 70%
+      padding-bottom: .5rem
+      border-bottom: 1px solid vm.$lightBlue
+      font:
+        size: .7rem
+        weight: bold
+      text-transform: uppercase
+      color: vm.$white
+      transition: color .3s
+      &:hover
+        color: vm.$grayish
+  &__img
+    display: none
+    height: 30rem
+  &__gradient
+    position: absolute
     width: 100%
     height: 100%
-    gap: 1rem
-    &__text
-      @include vm.flex($direction : column,$align : flex-start)
-      font-size: 1rem
-    &__prices
-      @include vm.flex()
-      &__now
-        font-size: 2.5rem
-        color: vm.$darkBlue
-      &__before
-        font-size: 1.5rem
-        text-decoration: line-through
-        color: vm.$grayish
-  &__buy
-    font-size: .8rem
-    color: vm.$pink
-  &__colors
-    @include vm.flex()
-    padding: .5rem
-    gap: 1rem
-    &__color
-      width: 1rem
-      height: 1rem
-      background-color: red
-      &:nth-of-type(1)
-        background-color: red
-      &:nth-of-type(2)
-        background-color: purple
-      &:nth-of-type(3)
-        background-color: green
-  &__img
+    background: linear-gradient(90deg, vm.$darkBlue 0%, vm.$green 68%)
+    clip-path: polygon(0% 0%,0% 15%,10% 20%,70% 5%,100% 10%,100% 100%,75% 95%,30% 100%,0% 100%)
+    z-index: -1
+  &__hero_text
     position: absolute
-    bottom: 0
-    right: -2rem
-    height: 7rem
+    opacity: .05
+    font-weight: 700
+    z-index: -1
 // Styles modifications for desktop devices
 @media screen and (min-width: 1100px)
   // Header and navigation menu
@@ -203,3 +215,17 @@ body
   .hero__popup
     right: 20vw
     bottom: 15vh
+  // Runner section styles
+  .runner__text
+    padding-left: 0
+
+// Tablet styles
+@media screen and (min-width: 900px)
+  .runner
+    padding: 0
+    &__text
+      padding-left: 3rem
+    &__img
+      display: inline-block
+    &__gradient
+      clip-path: polygon(0% 0%,25% 15%, 35% 0%,75% 0%,90% 15%, 100% 0% ,100% 100%, 70% 95%, 33% 100%, 0% 100%)

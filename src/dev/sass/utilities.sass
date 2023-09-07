@@ -12,11 +12,24 @@
   text-transform: uppercase
 .hero_text
   color : vm.$white
-  font-size : min(10rem,12vw)
+  font-size : min(10rem,14vw)
   text-transform: uppercase
+.announcement_text
+  display: inline-block
+  background: linear-gradient(90deg, vm.$blue 30%, vm.$lightBlue 70%)
+  background-clip : text
+  font:
+    size: min(2rem,7vw)
+    weight: bold
+  text-transform: uppercase
+  color: transparent
+  &::first-letter
+    font-size: min(4rem,12vw)
+.subtitle
+  text-transform: uppercase
+  font-size: 1rem
 .gradient
   width: 100%
-  background: linear-gradient(90deg, vm.$darkBlue 31%, vm.$green 68%)
 .sectionTitle
   color: vm.$black
   font-size: 2rem
