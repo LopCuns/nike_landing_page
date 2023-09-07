@@ -10,7 +10,11 @@
   <link rel="mask-icon" href="src/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="src/public/styles/reset.css">
+  <link rel="stylesheet" href="src/public/styles/utilities.css">
   <link rel="stylesheet" href="src/public/styles/index.css">
+  <link rel="stylesheet" href="src/public/styles/animation.css">
+
   <title>Nike football</title>
 </head>
 <body>
@@ -47,7 +51,7 @@
   </header>
   <main class="main">
     <section class="main__section hero">
-      <img src="src/assets/images/captain.webp" alt="captain image" class="hero__img" draggable="false">
+      <img src="src/assets/images/captain.webp" alt="captain image" class="hero__img" draggable="false" data-animate="faderight">
       <h1 class="hero_text hero__text">
         football
       </h1>
@@ -61,14 +65,14 @@
       <img src="src/assets/images/nike_icon.svg" alt="nike logo" class="nikelogo" draggable="false">
       <h2 class="sectionTitle">nike season 12</h2>
       <div class="productcards">
-        <product-card data-colors="#f00|#ff0|#0f0">
+        <product-card data-colors="#f00|#ff0|#0f0" data-animate="faderight">
           <h3 slot="info__text">
             <span>acronym x nike</span><span>air presto mid "dynamic yellow"</span>
           </h3>
           <p slot="price__now">23.95$</p>
           <img src="src/assets/images/nikeair.webp" alt="nike air image" slot="productcard__img">
         </product-card>
-        <product-card data-colors="#afa|#baf|#000">
+        <product-card data-colors="#afa|#baf|#000" data-animate="faderight" data-delay="500">
           <h3 slot="info__text">
             <span>nike therma</span><span>hoodie junior</span>
           </h3>
@@ -76,7 +80,7 @@
           <p slot="price__before">23.89$</p>
           <img src="src/assets/images/hoodie.webp" alt="nike hoodie" slot="productcard__img">
         </product-card>
-        <product-card data-colors="#f0d|#49f|#aff">
+        <product-card data-colors="#f0d|#49f|#aff" data-animate="faderight" data-delay="1000">
           <h3 slot="info__text">
             <span>nike women's epic</span><span>react flyknit unic</span>
           </h3>
@@ -98,7 +102,7 @@
         </div>
         <a href="#" class="runner__text__link"><span>explore the collection</span><span>-></span></a>
       </div>
-      <img src="src/assets/images/runner.webp" alt="baller running" class="runner__img" draggable="false">
+      <img src="src/assets/images/runner.webp" alt="baller running" class="runner__img" draggable="false" data-animate="faderight">
       <div class="gradient runner__gradient"></div>
       <p class="hero_text runner__hero_text">just do it</p>
     </section>
@@ -127,7 +131,7 @@
             <div class="events__content__eventcursor__point"></div>
           </div>
         </article>
-        <img src="src/assets/images/marathon.webp" alt="marathon map" class="events__img" draggable="false">
+        <img src="src/assets/images/marathon.webp" alt="marathon map" class="events__img" draggable="false" data-animate="fadeleft">
       </div>
     </section>
   </main>
@@ -151,6 +155,8 @@
   </footer>
   <!-- Foto de <a href="https://unsplash.com/es/@alschim?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Alexander Schimmeck</a> en <a href="https://unsplash.com/es/fotos/mSZVVUdxBls?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
   <!-- Foto de <a href="https://unsplash.com/es/@johntorcasio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">John Torcasio</a> en <a href="https://unsplash.com/es/fotos/fkDch-0vNfY?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> -->
-  <script src="src/public/scripts/index.js" type="module"></script>
+  <script src="src/public/scripts/menu.js"></script>
+  <script src="src/public/scripts/productcard.component.js"></script>
+  <script src="src/public/scripts/animate.js"></script>
 </body>
 </html>

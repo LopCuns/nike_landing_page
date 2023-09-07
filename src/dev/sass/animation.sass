@@ -1,0 +1,14 @@
+$animationDuration : 1s
+
+.animated
+  opacity: 1 !important
+  transform: translateX(0) !important
+[data-animate]
+  transition: transform $animationDuration, opacity $animationDuration 
+[data-animate='faderight']
+  opacity: 0
+  transform: translateX(3rem)
+
+[data-animate='fadeleft']
+  opacity: 0
+  transform: translateX(-3rem)
